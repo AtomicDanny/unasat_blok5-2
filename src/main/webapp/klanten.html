@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body onload="loadKlanten()">
+<ul>
+    <li><a href="#" onclick="home()" ><i data-feather="home"></i> Home</a></li>
+    <li><a href="#" onclick="rental()" ><i data-feather="book"></i> Register</a></li>
+    <li><a href="#" onclick="klanten()" class="selected"><i data-feather="user"></i>Klanten</a></li>
+    <li><a href="#" onclick="cars()" ><i data-feather="truck"></i> Auto's</a></li>
+    <li style="float:right"><a class="active" onclick="logout()" href="#"><i data-feather="log-out"></i> </a></li>
+</ul>
+<div class="w3-container w3-half w3-margin-top">
+
+    <p>
+        <input id="id" class="w3-input" type="hidden" style="width:90%">
+    </p>
+
+    <p>
+        <label>Naam</label>
+        <input id="naam" class="w3-input" type="text" style="width:90%" required>
+    </p>
+    <p>
+        <label>Geslacht</label>
+        <!--        <input id="geslacht" class="w3-input" type="text" style="width:90%" required>-->
+        <select id="geslacht" class="w3-select" style="width: 90%" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+    </p>
+    <p>
+        <label>Tel. Nummer</label>
+        <input id="tel" class="w3-input" type="number" style="width:90%" required>
+    </p>
+    <p>
+        <label>E-mail</label>
+        <input id="email" class="w3-input" type="email" style="width:90%" required>
+    </p>
+    <p>
+        <button id="submitButton" onclick="updateOrCreate()" class="w3-button w3-section w3-teal w3-ripple">Create Client</button></p>
+
+</div>
+
+<div id="klanten" class="w3-container">
+
+</div>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/nav.js"></script>
+<script src="js/klanten.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+<script>
+    $(document).ready(function(){
+        feather.replace();
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body onload="loadCars()">
+<ul>
+    <li><a href="#" onclick="home()">Home</a></li>
+    <li><a href="#" onclick="rental()" >Register</a></li>
+    <li><a href="#" onclick="klanten()">Klanten</a></li>
+    <li><a href="#" onclick="cars()" class="selected">Auto's</a></li>
+    <li style="float:right"><a class="active" onclick="logout()" href="#">Logout</a></li>
+</ul>
+<div class="w3-container w3-half w3-margin-top">
+
+    <p>
+        <input id="id" class="w3-input" type="hidden" style="width:90%">
+    </p>
+
+    <p>
+        <label>Brand</label><br>
+        <select id="brand" class="w3-select" style="width: 90%" required>
+            <option value="1">toyota</option>
+            <option value="2">nissan</option>
+            <option value="3">vw</option>
+            <option value="4">mercedes-Benz</option>
+            <option value="5">audi</option>
+            <option value="6">chevrolet</option>
+            <option value="7">ford</option>
+            <option value="8">honda</option>
+        </select>
+    </p>
+    <p>
+        <label>Classification</label><br>
+        <select id="class" class="w3-select" style="width: 90%" required>
+            <option value="1">suv</option>
+            <option value="2">luxury</option>
+            <option value="3">sportscar</option>
+            <option value="4">sedan</option>
+            <option value="5">coup</option>
+            <option value="6">hatchback</option>
+            <option value="7">truck</option>
+            <option value="8">pick-up Truck</option>
+            <option value="9">mini-van</option>
+            <option value="10">convertible</option>
+        </select>
+    </p>
+    <p>
+        <label>Model</label>
+        <input id="model" class="w3-input" type="text" style="width:90%" required>
+    </p>
+    <p>
+        <label>Bouwjaar</label>
+        <input id="bouwjaar" class="w3-input" type="number" style="width:90%" required>
+    </p>
+    <p>
+        <label>Prijs per Dag</label>
+        <input id="price" class="w3-input" type="number" style="width:90%" required>
+    </p>
+    <p>
+        <button id="submitButton" onclick="updateOrCreate()" class="w3-button w3-section w3-teal w3-ripple">Create Car</button></p>
+
+</div>
+
+<div id="klanten" class="w3-container">
+
+</div>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/nav.js"></script>
+<script src="js/cars.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+<ul>
+    <li><a href="#" onclick="home()" class="selected"><i data-feather="home"></i> Home</a></li>
+    <li><a href="#" onclick="rental()" ><i data-feather="book"></i> Register</a></li>
+    <li><a href="#" onclick="klanten()"><i data-feather="user"></i> Klanten</a></li>
+    <li><a href="#" onclick="cars()" ><i data-feather="truck"></i> Auto's</a></li>
+    <li style="float:right"><a class="active" onclick="logout()" href="#"><i data-feather="log-out"></i> </a></li>
+</ul>
+
+
+<!--<ul class="w3-ul w3-card-4" style="background-color: white">-->
+<!--    <li id="records"></li>-->
+<!--    <li id="total"></li>-->
+<!--</ul>-->
+
+<div>
+    <h1 id="records"></h1>
+</div>
+<br>
+<div>
+    <h1 id="total"></h1>
+</div>
+
+<br>
+<div>
+    <h1 id="client"></h1>
+</div>
+<br>
+<div>
+    <h1 id="cars"></h1>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="js/homepage.js"></script>
+<script src="js/nav.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+<script>
+    $(document).ready(function(){
+        feather.replace();
+    });
+</script>
+</body>
+</html>
